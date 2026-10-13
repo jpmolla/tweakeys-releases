@@ -1,0 +1,52 @@
+name: Bug report
+description: Report unexpected behavior in Tweakeys
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Tweakeys version
+      placeholder: e.g. 0.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux (X11)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: keyboard
+    attributes:
+      label: Physical keyboard and system layout
+      placeholder: e.g. ISO keyboard, Windows US layout
+  - type: input
+    id: layout
+    attributes:
+      label: Tweakeys layout in use
+      placeholder: e.g. Qwerty (default), custom
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start twk
+        2. Press AltGr + …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. actual result
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: config.json (if modified)
+      render: json
